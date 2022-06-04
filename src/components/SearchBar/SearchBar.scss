@@ -1,0 +1,60 @@
+@import '../../styles/index.scss';
+
+header {
+  background-color: $primary;
+  padding: 8px 50px 8px 50px;
+  display: flex;
+  justify-content: space-around;
+
+  .searchbar {
+    display: flex;
+    display: inline-flex;
+
+    & img {
+      padding-right: 30px;
+    }
+
+    &-container {
+      display: flex;
+
+      & input {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: 1px;
+        outline: none;
+        padding-left: 15px;
+        font-size: 15px;
+        width: 45rem;
+      }
+
+      &-boxicon {
+        background-color: $light-grey;
+        display: flex;
+        align-items: center;
+        padding: 0.3em;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        img {
+          padding-right: 0;
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+}
+
+header .searchbar-container input {
+  @include xs {
+    width: 12rem;
+  }
+
+  @include md {
+    width: 32rem;
+  }
+
+  @include xl {
+    width: 47rem;
+  }
+}

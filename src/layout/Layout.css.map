@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;EACT,gBAAgB,ECCL,OAAO;CDAnB",
+    "sources": [
+        "Layout.scss",
+        "../styles/_colors.scss"
+    ],
+    "names": [],
+    "file": "Layout.css"
+}

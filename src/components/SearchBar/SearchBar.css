@@ -1,0 +1,76 @@
+header {
+  background-color: #ffe600;
+  padding: 8px 50px 8px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header .searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+header .searchbar img {
+  padding-right: 30px;
+}
+
+header .searchbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .searchbar-container input {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px;
+  outline: none;
+  padding-left: 15px;
+  font-size: 15px;
+  width: 45rem;
+}
+
+header .searchbar-container-boxicon {
+  background-color: #eeeeee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.3em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+header .searchbar-container-boxicon img {
+  padding-right: 0;
+  width: 22px;
+  height: 22px;
+}
+
+@media (min-width: 0) {
+  header .searchbar-container input {
+    width: 12rem;
+  }
+}
+
+@media (min-width: 720px) {
+  header .searchbar-container input {
+    width: 32rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .searchbar-container input {
+    width: 47rem;
+  }
+}
+/*# sourceMappingURL=SearchBar.css.map */
