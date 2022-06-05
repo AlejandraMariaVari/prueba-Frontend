@@ -1,0 +1,29 @@
+@import '../../../styles/index.scss';
+
+.productrow {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid $light-grey;
+
+  .align-left {
+    width: 60%;
+    display: flex;
+  }
+
+  &-info {
+    padding: 0 1rem;
+    color: $graphite-black;
+
+    .price {
+      font-size: 18px;
+    }
+  }
+
+  .align-right {
+    padding: 0 5rem;
+    align-self: center;
+    color: $lead-black;
+    font-size: 13px;
+  }
+}

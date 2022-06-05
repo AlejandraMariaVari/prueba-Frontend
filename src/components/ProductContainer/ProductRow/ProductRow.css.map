@@ -1,8 +1,11 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,WAAW,CAAC;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,OAAO,EAAE,MAAM;EACf,aAAa,EAAE,GAAG,CAAC,KAAK,CGDb,OAAO;CHuBnB;;AA1BD,AAME,WANS,CAMT,WAAW,CAAC;EACV,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,IAAI;CACd;;AAEA,AAAD,gBAAM,CAAC;EACL,OAAO,EAAE,MAAM;EACf,KAAK,EGbQ,OAAO;CHkBrB;;AAPA,AAIC,gBAJI,CAIJ,MAAM,CAAC;EACL,SAAS,EAAE,IAAI;CAChB;;AAjBL,AAoBE,WApBS,CAoBT,YAAY,CAAC;EACX,OAAO,EAAE,MAAM;EACf,UAAU,EAAE,MAAM;EAClB,KAAK,EGtBI,OAAO;EHuBhB,SAAS,EAAE,IAAI;CAChB",
     "sources": [
-        "ProductRow.scss"
+        "ProductRow.scss",
+        "../../../styles/index.scss",
+        "../../../styles/_breakpoints.scss",
+        "../../../styles/_colors.scss"
     ],
     "names": [],
     "file": "ProductRow.css"

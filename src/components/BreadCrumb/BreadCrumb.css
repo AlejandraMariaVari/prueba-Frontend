@@ -1,4 +1,8 @@
-nav .breadcrumb-list {
+.breadcrumb {
+  padding-bottom: 0.8rem;
+}
+
+.breadcrumb-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,26 +10,25 @@ nav .breadcrumb-list {
   padding: 0;
 }
 
-nav .breadcrumb-list__item {
+.breadcrumb-list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
-nav .breadcrumb-list__item a {
+.breadcrumb-list__item a {
   text-decoration: none;
-  font-family: arial;
   font-size: 13px;
   color: #999999;
 }
 
-nav .breadcrumb-list__item a:hover {
+.breadcrumb-list__item a:hover {
   color: #666666;
   font-weight: 500;
 }
 
-nav .breadcrumb-list__icon img {
+.breadcrumb-list__icon img {
   width: 17px;
 }
 /*# sourceMappingURL=BreadCrumb.css.map */

@@ -1,1 +1,36 @@
-/* No CSS *//*# sourceMappingURL=ProductRow.css.map */
+.productrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.productrow .align-left {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productrow-info {
+  padding: 0 1rem;
+  color: #333333;
+}
+
+.productrow-info .price {
+  font-size: 18px;
+}
+
+.productrow .align-right {
+  padding: 0 5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #666666;
+  font-size: 13px;
+}
+/*# sourceMappingURL=ProductRow.css.map */

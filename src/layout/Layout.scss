@@ -3,6 +3,7 @@
 body {
   margin: 0;
   background-color: $light-grey;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .layout-content {
@@ -23,6 +24,6 @@ body {
   }
 
   @include xl {
-    padding: 0.8rem 9rem;
+    padding: 0.8rem 11rem;
   }
 }
