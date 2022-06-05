@@ -1,6 +1,28 @@
-@import '../styles/_colors.scss';
+@import '../styles/index.scss';
 
 body {
   margin: 0;
   background-color: $light-grey;
+}
+
+.layout-content {
+  @include xs {
+    padding: 0.8rem 1rem;
+  }
+
+  @include sm {
+    padding: 0.8rem 3rem;
+  }
+
+  @include md {
+    padding: 0.8rem 5rem;
+  }
+
+  @include lg {
+    padding: 0.8rem 7rem;
+  }
+
+  @include xl {
+    padding: 0.8rem 9rem;
+  }
 }

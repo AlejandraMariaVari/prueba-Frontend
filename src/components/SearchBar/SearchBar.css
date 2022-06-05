@@ -1,6 +1,6 @@
 header {
   background-color: #ffe600;
-  padding: 8px 50px 8px 50px;
+  padding: 0.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -70,7 +70,7 @@ header .searchbar-container-boxicon img {
 
 @media (min-width: 1200px) {
   header .searchbar-container input {
-    width: 47rem;
+    width: 55rem;
   }
 }
 /*# sourceMappingURL=SearchBar.css.map */

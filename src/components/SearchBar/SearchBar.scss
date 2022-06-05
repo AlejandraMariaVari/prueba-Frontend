@@ -2,7 +2,7 @@
 
 header {
   background-color: $primary;
-  padding: 8px 50px 8px 50px;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: space-around;
 
@@ -55,6 +55,6 @@ header .searchbar-container input {
   }
 
   @include xl {
-    width: 47rem;
+    width: 55rem;
   }
 }

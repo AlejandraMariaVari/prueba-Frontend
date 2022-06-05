@@ -1,1 +1,31 @@
-/* No CSS *//*# sourceMappingURL=BreadCrumb.css.map */
+nav .breadcrumb-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav .breadcrumb-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+nav .breadcrumb-list__item a {
+  text-decoration: none;
+  font-family: arial;
+  font-size: 13px;
+  color: #999999;
+}
+
+nav .breadcrumb-list__item a:hover {
+  color: #666666;
+  font-weight: 500;
+}
+
+nav .breadcrumb-list__icon img {
+  width: 17px;
+}
+/*# sourceMappingURL=BreadCrumb.css.map */
