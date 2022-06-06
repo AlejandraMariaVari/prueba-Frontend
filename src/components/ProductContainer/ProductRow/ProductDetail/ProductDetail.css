@@ -1,1 +1,45 @@
-/* No CSS *//*# sourceMappingURL=ProductDetail.css.map */
+.productdetail {
+  padding: 1rem 0;
+}
+
+.productdetail-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.productdetail-content__image {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.productdetail-content__image img {
+  width: 300px;
+}
+
+.productdetail-content__info {
+  color: #333333;
+}
+
+.productdetail-content__info p {
+  font-size: 13px;
+}
+
+.productdetail-description {
+  width: 80%;
+}
+
+.productdetail-description h3 {
+  color: #333333;
+}
+
+.productdetail-description p {
+  color: #999999;
+  font-size: 14px;
+}
+/*# sourceMappingURL=ProductDetail.css.map */

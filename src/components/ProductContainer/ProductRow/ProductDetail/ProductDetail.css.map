@@ -1,8 +1,11 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAEA,AAAA,cAAc,CAAC;EACb,OAAO,EAAE,MAAM;CAkChB;;AAjCE,AAAD,sBAAS,CAAC;EACR,OAAO,EAAE,IAAI;CAkBd;;AAhBE,AAAD,6BAAQ,CAAC;EACP,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;CAKxB;;AARA,AAKC,6BALM,CAKN,GAAG,CAAC;EACF,KAAK,EAAE,KAAK;CACb;;AAGF,AAAD,4BAAO,CAAC;EACN,KAAK,EGhBM,OAAO;CHoBnB;;AALA,AAEC,4BAFK,CAEL,CAAC,CAAC;EACA,SAAS,EAAE,IAAI;CAChB;;AAIJ,AAAD,0BAAa,CAAC;EACZ,KAAK,EAAE,GAAG;CAUX;;AAXA,AAGC,0BAHW,CAGX,EAAE,CAAC;EACD,KAAK,EG3BM,OAAO;CH4BnB;;AALF,AAOC,0BAPW,CAOX,CAAC,CAAC;EACA,KAAK,EG7BJ,OAAO;EH8BR,SAAS,EAAE,IAAI;CAChB",
     "sources": [
-        "ProductDetail.scss"
+        "ProductDetail.scss",
+        "../../../../styles/index.scss",
+        "../../../../styles/_breakpoints.scss",
+        "../../../../styles/_colors.scss"
     ],
     "names": [],
     "file": "ProductDetail.css"
