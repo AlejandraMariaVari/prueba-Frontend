@@ -1,7 +1,7 @@
 @import '../../styles/colors';
 
 .breadcrumb {
-  padding-bottom: 0.8rem;
+  padding-bottom: 1rem;
 
   &-list {
     display: flex;
@@ -14,7 +14,7 @@
 
       a {
         text-decoration: none;
-        font-size: 13px;
+        font-size: 14px;
         color: $gray;
 
         &:hover {

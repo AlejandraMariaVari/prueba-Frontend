@@ -1,12 +1,13 @@
 @import '../../../../styles/index.scss';
 
 .productdetail {
-  padding: 1rem 0;
+  padding: 2rem 0;
   &-content {
     display: flex;
 
     &__image {
-      width: 80%;
+      // width: 80%;
+      width: 680px;
       display: flex;
       justify-content: center;
 
@@ -17,22 +18,42 @@
 
     &__info {
       color: $graphite-black;
+      padding-right: 1rem;
+
       p {
-        font-size: 13px;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 16px;
+      }
+
+      .title-product {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .price-product {
+        margin: 2rem 0;
+        font-size: 46px;
       }
     }
   }
 
   &-description {
     width: 80%;
+    padding: 0 1rem;
 
     h3 {
       color: $graphite-black;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      font-size: 28px;
     }
 
     p {
       color: $gray;
-      font-size: 14px;
+      font-size: 16;
+      margin-top: 0;
+      margin-bottom: 2rem;
     }
   }
 }

@@ -1,5 +1,5 @@
 .breadcrumb {
-  padding-bottom: 0.8rem;
+  padding-bottom: 1rem;
 }
 
 .breadcrumb-list {
@@ -19,7 +19,7 @@
 
 .breadcrumb-list__item a {
   text-decoration: none;
-  font-size: 13px;
+  font-size: 14px;
   color: #999999;
 }
 

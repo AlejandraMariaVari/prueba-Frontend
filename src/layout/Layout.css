@@ -6,31 +6,31 @@ body {
 
 @media (min-width: 0) {
   .layout-content {
-    padding: 0.8rem 1rem;
+    padding: 1rem 1rem;
   }
 }
 
 @media (min-width: 480px) {
   .layout-content {
-    padding: 0.8rem 3rem;
+    padding: 1rem 3rem;
   }
 }
 
 @media (min-width: 720px) {
   .layout-content {
-    padding: 0.8rem 5rem;
+    padding: 1rem 5rem;
   }
 }
 
 @media (min-width: 960px) {
   .layout-content {
-    padding: 0.8rem 7rem;
+    padding: 1rem 7rem;
   }
 }
 
 @media (min-width: 1200px) {
   .layout-content {
-    padding: 0.8rem 11rem;
+    padding: 1rem 11rem;
   }
 }
 /*# sourceMappingURL=Layout.css.map */

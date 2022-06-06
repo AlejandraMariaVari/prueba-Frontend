@@ -15,8 +15,8 @@ function ProductDetail() {
         </div>
         <div className="productdetail-content__info">
           <p>Nuevo - 234 vendidos</p>
-          <h2>Deco Reverse Sombrero Oxford</h2>
-          <h2>$ 1.980</h2>
+          <h2 className="title-product">Deco Reverse Sombrero Oxford</h2>
+          <h2 className="price-product">$ 1.980</h2>
           <button className="button">Comprar</button>
         </div>
       </div>

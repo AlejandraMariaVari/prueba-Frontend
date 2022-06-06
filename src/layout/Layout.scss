@@ -8,22 +8,22 @@ body {
 
 .layout-content {
   @include xs {
-    padding: 0.8rem 1rem;
+    padding: 1rem 1rem;
   }
 
   @include sm {
-    padding: 0.8rem 3rem;
+    padding: 1rem 3rem;
   }
 
   @include md {
-    padding: 0.8rem 5rem;
+    padding: 1rem 5rem;
   }
 
   @include lg {
-    padding: 0.8rem 7rem;
+    padding: 1rem 7rem;
   }
 
   @include xl {
-    padding: 0.8rem 11rem;
+    padding: 1rem 11rem;
   }
 }
