@@ -1,10 +1,14 @@
 import React from 'react'
+
+// Styles
 import './ProductRow.css'
+import '../../../styles/utilities.css'
+
 import testImage from '../../../assets/test-image.png'
 
 function ProductRow() {
   return (
-    <>
+    <article className="product-container">
       <section className="productrow">
         <div className="align-left">
           <div className="productrow-image">
@@ -17,7 +21,7 @@ function ProductRow() {
         </div>
         <div className="align-right">Capital Federal</div>
       </section>
-    </>
+    </article>
   )
 }
 
