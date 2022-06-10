@@ -13,7 +13,7 @@ El proyecto se encuentra en un repositorio de Github publicado con el nombre [pr
 1. Ingresar al proyecto [prueba-Frontend](https://github.com/AlejandraMariaVari/prueba-Frontend)
 2. Realizar la clonación del repositorio.
 3. Después de clonar el proyecto, se instalan las dependencias con `yarn install` o `npm install`
-4. Se ejecuta el proyecto con el comando `npm run dev` (por defecto el proyecto se ejecutará en el puerto 4000)
+4. Se ejecuta el proyecto con el comando `npm run dev` (por defecto el proyecto se ejecutará en el puerto 3000)
 5. Debido al tiempo disponible, no me fue posible finalizar el proyecto, dado ello el diseño de cada vista se encuentra en las siguientes rutas para su visualización:
    Rutas:
    5.1 Vista Caja de búsqueda -> http://localhost:3000/
