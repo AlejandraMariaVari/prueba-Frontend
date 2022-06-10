@@ -1,11 +1,14 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import './SearchBar.css'
+
+import * as API from '../../services/getItems'
 
 // Images
 import logo from '../../assets/logo.png'
 import search from '../../assets/search.png'
 
 function SearchBar() {
+  const [searchItems, setSearchItems] = useState([])
   return (
     <header>
       <div className="searchbar">
