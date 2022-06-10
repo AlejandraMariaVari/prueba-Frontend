@@ -15,7 +15,7 @@ function Layout() {
       <div className="layout-content">
         <BreadCrumb />
         <Routes>
-          <Route path="/search" element={<ProductRow />} />
+          <Route path="/items" element={<ProductRow />} />
           <Route path="/items/:id" element={<ProductDetail />} />
         </Routes>
       </div>
@@ -24,8 +24,3 @@ function Layout() {
 }
 
 export default Layout
-
-// APIS DE EJEMPLO PARA MIRAR ESTRUCTURA:
-// SEARCH: https://api.mercadolibre.com/sites/MLA/search?q=Motorola%20G6#json
-// ITEMS: https://api.mercadolibre.com/items/MLA783905547
-// DESCRIPTION: https://api.mercadolibre.com/items/MLA783905547/description
