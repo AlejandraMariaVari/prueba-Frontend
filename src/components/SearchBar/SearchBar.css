@@ -48,6 +48,8 @@ header .searchbar-container-boxicon {
   padding: 0.3em;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 header .searchbar-container-boxicon img {

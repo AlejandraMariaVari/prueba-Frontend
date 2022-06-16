@@ -6,7 +6,8 @@ import '../../../styles/utilities.css'
 
 import testImage from '../../../assets/test-image.png'
 
-function ProductRow() {
+function ProductRow({ items }) {
+  console.log('items component product row', items)
   return (
     <article className="product-container">
       <section className="productrow">
