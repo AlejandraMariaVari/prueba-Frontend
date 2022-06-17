@@ -1,31 +1,23 @@
-import { useEffect, useState, useRef } from 'react'
+import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './SearchBar.css'
 import '../../layout/Layout.css'
-
-// Services
-import * as API from '../../services/getItems'
-
-// Components
-import ProductRow from '../ProductContainer/ProductRow/ProductRow'
 
 // Images
 import logo from '../../assets/logo.png'
 import search from '../../assets/search.png'
 
 function SearchBar() {
-  const [items, setItems] = useState([])
+  const navegateTo = useNavigate()
   const keywordInput = useRef(null)
 
   function searchProduct() {
     const keyword = keywordInput.current.value
-    API.getItemsByKeyword(keyword)
-      .then((response) => {
-        // console.log('response api getItemsByKeyword', response.data.items)
-        setItems(response.data.items)
-      })
-      .catch((error) => {
-        console.log('Hay un error al hacer la petición al servicio', error)
-      })
+
+    navegateTo({
+      pathname: '/items',
+      search: `?search=${keyword}`,
+    })
   }
 
   return (
@@ -48,11 +40,6 @@ function SearchBar() {
           </div>
         </div>
       </header>
-      {items.length != 0 ? (
-        <div className="layout-content">
-          <ProductRow items={items} />
-        </div>
-      ) : null}
     </>
   )
 }

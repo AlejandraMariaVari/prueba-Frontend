@@ -15,7 +15,7 @@ function Layout() {
       <div className="layout-content">
         <BreadCrumb />
         <Routes>
-          <Route path="/items" element={<ProductRow />} />
+          <Route path="/items/" element={<ProductRow />} />
           <Route path="/items/:id" element={<ProductDetail />} />
         </Routes>
       </div>

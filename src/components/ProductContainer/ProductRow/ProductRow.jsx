@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 
 // Styles
 import './ProductRow.css'
@@ -6,8 +7,26 @@ import '../../../styles/utilities.css'
 
 import testImage from '../../../assets/test-image.png'
 
-function ProductRow({ items }) {
-  console.log('items component product row', items)
+// Services
+import * as API from '../../../services/getItems'
+
+function ProductRow() {
+  const [searchParams] = useSearchParams()
+  const [items, setItems] = useState([])
+  const keyword = searchParams.get('search')
+
+  useEffect(() => {
+    API.getItemsByKeyword(keyword)
+      .then((response) => {
+        setItems(response.data.items)
+      })
+      .catch((error) => {
+        console.log('Error al hacer la petición al servicio', error)
+      })
+  }, [keyword])
+
+  console.log('items', items)
+
   return (
     <article className="product-container">
       <section className="productrow">
