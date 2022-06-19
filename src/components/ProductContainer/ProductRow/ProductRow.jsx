@@ -5,8 +5,6 @@ import { useSearchParams } from 'react-router-dom'
 import './ProductRow.css'
 import '../../../styles/utilities.css'
 
-import testImage from '../../../assets/test-image.png'
-
 // Services
 import * as API from '../../../services/getItems'
 
@@ -25,24 +23,27 @@ function ProductRow() {
       })
   }, [keyword])
 
-  console.log('items', items)
+  // filterItems saves the first 4 products
+  const filterItems = items.slice(0, 4)
 
-  return (
-    <article className="product-container">
+  const listProducts = filterItems.map((product) => (
+    <article key={product.id} className="product-container">
       <section className="productrow">
         <div className="align-left">
           <div className="productrow-image">
-            <img src={testImage} alt="product-image" />
+            <img src={product.picture} alt="product-image" />
           </div>
           <div className="productrow-info">
-            <div className="price">$ 1.980</div>
-            <p>Apple ipod touch 5g 16gb Negro igual A Nuevo completo único!</p>
+            <div className="price">$ {product.price.amount}</div>
+            <p>{product.title}</p>
           </div>
         </div>
-        <div className="align-right">Capital Federal</div>
+        <div className="align-right">{product.city}</div>
       </section>
     </article>
-  )
+  ))
+
+  return <>{listProducts}</>
 }
 
 export default ProductRow

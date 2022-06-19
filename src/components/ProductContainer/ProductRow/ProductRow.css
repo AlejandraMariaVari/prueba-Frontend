@@ -1,4 +1,5 @@
 .productrow {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,16 +11,13 @@
 }
 
 .productrow .align-left {
-  width: 60%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .productrow .align-left .productrow-image {
-  border-radius: 4px;
-  height: 90px;
-  width: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,9 +28,11 @@
 }
 
 .productrow .align-left .productrow-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
   margin: auto;
 }
 
@@ -46,13 +46,14 @@
 }
 
 .productrow-info p {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 0;
   font-size: 18px;
 }
 
 .productrow .align-right {
-  padding: 0 5rem;
+  width: 20%;
+  padding-right: 5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
