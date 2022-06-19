@@ -19,6 +19,7 @@ function ProductRow() {
         setItems(response.data.items)
       })
       .catch((error) => {
+        alert('Ha ocurrido un error, por favor intenta ingresar más tarde')
         console.log('Error al hacer la petición al servicio', error)
       })
   }, [keyword])
@@ -43,7 +44,15 @@ function ProductRow() {
     </article>
   ))
 
-  return <>{listProducts}</>
+  return (
+    <>
+      {items.length > 0 ? (
+        listProducts
+      ) : (
+        <div>No hay resultados para tu búsqueda</div>
+      )}
+    </>
+  )
 }
 
 export default ProductRow
