@@ -12,9 +12,9 @@ export async function getItemsByKeyword(keyword) {
   }
 }
 
-export async function getItemById(itemId) {
+export async function getItemById(productId) {
   try {
-    const response = await fetch(`${API_URL}${itemId}`)
+    const response = await fetch(`${API_URL}${productId}`)
     const data = await response.json()
     return data
   } catch (err) {

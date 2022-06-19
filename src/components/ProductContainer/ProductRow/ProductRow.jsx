@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, Link } from 'react-router-dom'
 
 // Styles
 import './ProductRow.css'
@@ -26,33 +26,32 @@ function ProductRow() {
 
   // filterItems saves the first 4 products
   const filterItems = items.slice(0, 4)
+  console.log('items', items)
 
   const listProducts = filterItems.map((product) => (
-    <article key={product.id} className="product-container">
-      <section className="productrow">
-        <div className="align-left">
-          <div className="productrow-image">
-            <img src={product.picture} alt="product-image" />
+    <Link
+      key={product.id}
+      to={`/items/${product.id}`}
+      style={{ textDecoration: 'none' }}
+    >
+      <article className="product-container">
+        <section className="productrow">
+          <div className="align-left">
+            <div className="productrow-image">
+              <img src={product.picture} alt="product-image" />
+            </div>
+            <div className="productrow-info">
+              <div className="price">$ {product.price.amount}</div>
+              <p>{product.title}</p>
+            </div>
           </div>
-          <div className="productrow-info">
-            <div className="price">$ {product.price.amount}</div>
-            <p>{product.title}</p>
-          </div>
-        </div>
-        <div className="align-right">{product.city}</div>
-      </section>
-    </article>
+          <div className="align-right">{product.city}</div>
+        </section>
+      </article>
+    </Link>
   ))
 
-  return (
-    <>
-      {items.length > 0 ? (
-        listProducts
-      ) : (
-        <div>No hay resultados para tu búsqueda</div>
-      )}
-    </>
-  )
+  return <>{items.length > 0 ? listProducts : <div>Loading...</div>}</>
 }
 
 export default ProductRow

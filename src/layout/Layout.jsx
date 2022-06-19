@@ -16,7 +16,7 @@ function Layout() {
         <BreadCrumb />
         <Routes>
           <Route path="/items/" element={<ProductRow />} />
-          <Route path="/items/:id" element={<ProductDetail />} />
+          <Route path="/items/:productId" element={<ProductDetail />} />
         </Routes>
       </div>
     </div>
