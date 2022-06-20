@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { formatNumber } from '../../../../utils/formatNumber'
 
 // Styles
 import './ProductDetail.scss'
@@ -23,7 +24,9 @@ function ProductDetail() {
       })
   }, [productId])
 
-  console.log('itemdetail response', itemDetail)
+  const conditionInSpanish =
+    itemDetail.condition == 'new' ? 'Nuevo' : itemDetail.condition
+
   return (
     <article className="product-container">
       <section className="productdetail">
@@ -33,15 +36,17 @@ function ProductDetail() {
           </div>
           <div className="productdetail-content__info">
             <p>
-              {itemDetail.condition} - {itemDetail.sold_quantity} vendidos
+              {conditionInSpanish} - {itemDetail.sold_quantity} vendidos
             </p>
             <h2 className="title-product">{itemDetail.title}</h2>
-            <h2 className="price-product">$ {itemDetail.price}</h2>
+            <h2 className="price-product">
+              {itemDetail.price ? formatNumber(itemDetail.price) : 0}
+            </h2>
             <button className="button">Comprar</button>
           </div>
         </div>
         <div className="productdetail-description">
-          <h3>Descripcion del producto</h3>
+          <h3>Descripción del producto</h3>
           <p>{itemDetail.description}</p>
         </div>
       </section>

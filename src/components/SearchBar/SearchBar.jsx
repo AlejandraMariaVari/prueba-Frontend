@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import './SearchBar.css'
 import '../../layout/Layout.css'
 
@@ -24,7 +24,9 @@ function SearchBar() {
     <>
       <header>
         <div className="searchbar">
-          <img alt="logo" src={logo} />
+          <Link to={'/'}>
+            <img alt="logo" src={logo} />
+          </Link>
           <div className="searchbar-container">
             <input
               ref={keywordInput}

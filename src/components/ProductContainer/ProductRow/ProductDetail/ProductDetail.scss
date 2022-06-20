@@ -4,15 +4,17 @@
   padding: 2rem 0;
   &-content {
     display: flex;
+    flex-direction: row;
 
     &__image {
-      // width: 80%;
-      width: 680px;
       display: flex;
       justify-content: center;
+      padding-right: 1rem;
 
       img {
-        width: 300px;
+        width: 680px;
+        border-radius: 5px;
+        object-fit: cover;
       }
     }
 
@@ -55,5 +57,19 @@
       margin-top: 0;
       margin-bottom: 2rem;
     }
+  }
+}
+
+.productdetail-content__image img {
+  @include xs {
+    width: 200px;
+  }
+
+  @include md {
+    width: 360px;
+  }
+
+  @include xl {
+    width: 680px;
   }
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
+import { formatNumber } from '../../../utils/formatNumber'
 
 // Styles
 import './ProductRow.css'
@@ -26,7 +27,6 @@ function ProductRow() {
 
   // filterItems saves the first 4 products
   const filterItems = items.slice(0, 4)
-  console.log('items', items)
 
   const listProducts = filterItems.map((product) => (
     <Link
@@ -41,7 +41,9 @@ function ProductRow() {
               <img src={product.picture} alt="product-image" />
             </div>
             <div className="productrow-info">
-              <div className="price">$ {product.price.amount}</div>
+              <div className="price">
+                {product.price.amount ? formatNumber(product.price.amount) : 0}
+              </div>
               <p>{product.title}</p>
             </div>
           </div>
