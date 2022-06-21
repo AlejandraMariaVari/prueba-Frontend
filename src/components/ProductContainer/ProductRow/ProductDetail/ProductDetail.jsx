@@ -4,14 +4,19 @@ import { formatNumber } from '../../../../utils/formatNumber'
 
 // Styles
 import './ProductDetail.scss'
-import '../../../../styles/utilities.css'
+import '../../../../styles/utilities.scss'
 
 // Services
 import * as API from '../../../../services/getItems'
 
+// Api context
+import { AppContext } from '../../../../application/Provider'
+import BreadCrumb from '../../../BreadCrumb/BreadCrumb'
+
 function ProductDetail() {
   const { productId } = useParams()
   const [itemDetail, setItemDetail] = useState([])
+  const { categories } = useContext(AppContext)
 
   useEffect(() => {
     API.getItemById(productId)
@@ -28,29 +33,32 @@ function ProductDetail() {
     itemDetail.condition == 'new' ? 'Nuevo' : itemDetail.condition
 
   return (
-    <article className="product-container">
-      <section className="productdetail">
-        <div className="productdetail-content">
-          <div className="productdetail-content__image">
-            <img src={itemDetail.picture} alt="product-image" />
+    <>
+      <BreadCrumb categories={categories} />
+      <article className="product-container">
+        <section className="productdetail">
+          <div className="productdetail-content">
+            <div className="productdetail-content__image">
+              <img src={itemDetail.picture} alt="product-image" />
+            </div>
+            <div className="productdetail-content__info">
+              <p>
+                {conditionInSpanish} - {itemDetail.sold_quantity} vendidos
+              </p>
+              <h2 className="title-product">{itemDetail.title}</h2>
+              <h2 className="price-product">
+                {itemDetail.price ? formatNumber(itemDetail.price) : 0}
+              </h2>
+              <button className="button">Comprar</button>
+            </div>
           </div>
-          <div className="productdetail-content__info">
-            <p>
-              {conditionInSpanish} - {itemDetail.sold_quantity} vendidos
-            </p>
-            <h2 className="title-product">{itemDetail.title}</h2>
-            <h2 className="price-product">
-              {itemDetail.price ? formatNumber(itemDetail.price) : 0}
-            </h2>
-            <button className="button">Comprar</button>
+          <div className="productdetail-description">
+            <h3>Descripción del producto</h3>
+            <p>{itemDetail.description}</p>
           </div>
-        </div>
-        <div className="productdetail-description">
-          <h3>Descripción del producto</h3>
-          <p>{itemDetail.description}</p>
-        </div>
-      </section>
-    </article>
+        </section>
+      </article>
+    </>
   )
 }
 

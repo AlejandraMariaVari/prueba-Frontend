@@ -1,5 +1,5 @@
 import React from 'react'
-import './BreadCrumb.css'
+import './BreadCrumb.scss'
 
 import flow from '../../assets/flow.png'
 

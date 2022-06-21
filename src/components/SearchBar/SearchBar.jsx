@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-import './SearchBar.css'
-import '../../layout/Layout.css'
+import './SearchBar.scss'
+import '../../layout/Layout.scss'
 
 // Images
 import logo from '../../assets/logo.png'

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import { formatNumber } from '../../../utils/formatNumber'
 
 // Styles
-import './ProductRow.css'
-import '../../../styles/utilities.css'
+import './ProductRow.scss'
+import '../../../styles/utilities.scss'
 
 // Services
 import * as API from '../../../services/getItems'
@@ -12,10 +12,13 @@ import * as API from '../../../services/getItems'
 // Components
 import BreadCrumb from '../../BreadCrumb/BreadCrumb'
 
+// Api context
+import { AppContext } from '../../../application/Provider'
+
 function ProductRow() {
   const [searchParams] = useSearchParams()
   const [items, setItems] = useState([])
-  const [categories, setCategories] = useState([])
+  const { categories, setCategories } = useContext(AppContext)
 
   const keyword = searchParams.get('search')
 
