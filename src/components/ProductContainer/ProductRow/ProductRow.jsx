@@ -9,15 +9,21 @@ import '../../../styles/utilities.css'
 // Services
 import * as API from '../../../services/getItems'
 
+// Components
+import BreadCrumb from '../../BreadCrumb/BreadCrumb'
+
 function ProductRow() {
   const [searchParams] = useSearchParams()
   const [items, setItems] = useState([])
+  const [categories, setCategories] = useState([])
+
   const keyword = searchParams.get('search')
 
   useEffect(() => {
     API.getItemsByKeyword(keyword)
       .then((response) => {
-        setItems(response.data.items)
+        setItems(response.data?.items)
+        setCategories(response.data?.categories)
       })
       .catch((error) => {
         alert('Ha ocurrido un error, por favor intenta ingresar más tarde')
@@ -26,9 +32,9 @@ function ProductRow() {
   }, [keyword])
 
   // filterItems saves the first 4 products
-  const filterItems = items.slice(0, 4)
+  const filterItems = items?.slice(0, 4)
 
-  const listProducts = filterItems.map((product) => (
+  const listProducts = filterItems?.map((product) => (
     <Link
       key={product.id}
       to={`/items/${product.id}`}
@@ -53,7 +59,12 @@ function ProductRow() {
     </Link>
   ))
 
-  return <>{items.length > 0 ? listProducts : <div>Loading...</div>}</>
+  return (
+    <>
+      <BreadCrumb categories={categories} />
+      {items?.length > 0 ? listProducts : <div>Loading...</div>}
+    </>
+  )
 }
 
 export default ProductRow

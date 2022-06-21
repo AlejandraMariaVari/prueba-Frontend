@@ -3,38 +3,19 @@ import './BreadCrumb.css'
 
 import flow from '../../assets/flow.png'
 
-function BreadCrumb() {
+function BreadCrumb({ categories }) {
+  const categoriesList = categories?.map((category) => (
+    <li className="breadcrumb-list__item">
+      <a href="#">{category}</a>
+      <div className="breadcrumb-list__icon">
+        <img src={flow} alt="flow" />
+      </div>
+    </li>
+  ))
+
   return (
     <nav className="breadcrumb">
-      <ul className="breadcrumb-list">
-        <li className="breadcrumb-list__item">
-          <a href="#">Electrónica, audio y video</a>
-          <div className="breadcrumb-list__icon">
-            <img src={flow} alt="flow" />
-          </div>
-        </li>
-        <li className="breadcrumb-list__item">
-          <a href="#">ipod</a>
-          <div className="breadcrumb-list__icon">
-            <img src={flow} alt="flow" />
-          </div>
-        </li>
-        <li className="breadcrumb-list__item">
-          <a href="#">Reproductores</a>
-          <div className="breadcrumb-list__icon">
-            <img src={flow} alt="flow" />
-          </div>
-        </li>
-        <li className="breadcrumb-list__item">
-          <a href="#">ipod touch</a>
-          <div className="breadcrumb-list__icon">
-            <img src={flow} alt="flow" />
-          </div>
-        </li>
-        <li className="breadcrumb-list__item">
-          <a href="#">32 GB</a>
-        </li>
-      </ul>
+      <ul className="breadcrumb-list">{categoriesList}</ul>
     </nav>
   )
 }

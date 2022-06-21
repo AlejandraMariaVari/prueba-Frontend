@@ -13,8 +13,8 @@ function Layout() {
     <div className="layout">
       <SearchBar />
       <div className="layout-content">
-        <BreadCrumb />
         <Routes>
+          <Route path="/" element={<BreadCrumb />} />
           <Route path="/items/" element={<ProductRow />} />
           <Route path="/items/:productId" element={<ProductDetail />} />
         </Routes>
